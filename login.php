@@ -17,6 +17,8 @@
             echo "anda telah berhasil login";
             header("location: menu.php");
             exit();
+        }else if($_GET['pesan']=="belum_login"){
+             echo "anda harus login untuk mengakses";
         }
      }
      ?>
