@@ -11,6 +11,9 @@
     session_start();
     $username = $_SESSION['username'];
     $status = $_SESSION['status'];
+    if($_SESSION['status']!="login"){
+		header("location:login.php?pesan=belum_login");
+	}
     echo "<h2>Hallo $username, anda telah login</h2>
     menu utama <br><br>
     <a href = 'list.php'>Data Mahasiswa</a>
